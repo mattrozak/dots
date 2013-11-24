@@ -1,25 +1,71 @@
 " .vimrc " Matt Rozak
+set nocompatible                 " viM settings - MUST be first
 
-" Use vim settings instead of vi settings
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+""" vundle """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-syntax enable
-set background=dark
-" todo figure out how to do this
-" colorscheme solarized 
+filetype off                     " required for vundle!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
+" let Vundle manage Vundle - required! 
+Bundle 'gmarik/vundle'           
 
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-set number
-set showmatch
+"" bundles ""
 
-" key remaps
+   "" syntax highlighting ""
+   Bundle 'altercation/vim-colors-solarized'
+
+   "" project traversal ""
+   Bundle 'scrooloose/nerdtree'
+
+   "" file traversal ""
+   Bundle 'Lokaltog/vim-easymotion'
+
+   "" error checking ""
+   Bundle 'scrooloose/syntastic'
+
+"" end bundles ""
+
+filetype plugin indent on     " required!
+"
+" Brief help
+" :BundleList                 - list configured bundles
+" :BundleInstall(!)           - install (update) bundles
+" :BundleSearch(!) foo        - search (or refresh cache first) for foo
+" :BundleClean(!)             - confirm (or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle commands are not allowed.
+
+""" environment settings """"""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"" visual ""
+
+syntax enable                    " altercation/vim-colors-solarized
+set background=dark              " set solarized dark theme
+colorscheme solarized            "
+
+set history=50		               " keep 50 lines of command line history
+set ruler		                  " show the cursor position all the time
+set showcmd		                  " display incomplete commands
+set showmatch                    " jumps to matching ([{}]) momentarily
+set number                       " show line numbers
+
+"" functional ""
+
+set backspace=indent,eol,start   " allow backspacing over everything in insert
+set incsearch		               " do incremental searching
+
+set smartindent
+set tabstop=3
+set shiftwidth=3
+set expandtab
+
+if has('mouse')                  " Enable mouse if available 
+  set mouse=a
+endif
+
+""" key remaps """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap ; :
 nnoremap : ;
 
@@ -29,13 +75,3 @@ map <up> <nop>
 map <down> <nop>
 map <left> <nop>
 map <right> <nop>
-
-set smartindent
-set tabstop=3
-set shiftwidth=3
-set expandtab
-
-" Enable mouse if available 
-if has('mouse')
-  set mouse=a
-endif
