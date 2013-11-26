@@ -66,6 +66,8 @@ if has('mouse')                  " Enable mouse if available
 endif
 
 """ key remaps """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+:let mapleader = ","
+
 nnoremap ; :
 nnoremap : ;
 
