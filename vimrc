@@ -51,6 +51,9 @@ set showcmd		                  " display incomplete commands
 set showmatch                    " jumps to matching ([{}]) momentarily
 set number                       " show line numbers
 
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%90v.\+/
+
 "" functional ""
 
 set backspace=indent,eol,start   " allow backspacing over everything in insert
