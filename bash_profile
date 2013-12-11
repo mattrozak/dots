@@ -1,14 +1,21 @@
 # bash profile
 # matt rozak
 
-# ls #
+# ls
 alias l='ls'
 alias ls='ls -GF'
 alias ll='ls -lh'
 alias la='ls -a'
 alias lla='ls -lha'
 
-# source .local_aliases 
+# cd
+alias cd..="cd .."
+alias cd...="cd ../.."
+alias cd....="cd ../../.."
+alias cd.....="cd ../../../.."
+alias cd......="cd ../../../../.."
+
+# source .local_aliases
 if [ -f ~/.local_aliases ]; then
    source ~/.local_aliases 
 fi
