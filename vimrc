@@ -24,6 +24,9 @@ Bundle 'gmarik/vundle'
    "" error checking ""
    Bundle 'scrooloose/syntastic'
 
+   "" LaTeX ""
+   Bundle 'LaTeX-Box-Team/LaTeX-Box'
+
 "" end bundles ""
 
 filetype plugin indent on     " required!
@@ -52,8 +55,8 @@ set showmatch                    " jumps to matching ([{}]) momentarily
 set number                       " show line numbers
 
 " highlight over 95 columns
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%95v.\+/
+""highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+""match OverLength /\%95v.\+/
 
 " view trailing whitespace as dots
 set listchars=trail:·
@@ -65,8 +68,8 @@ set backspace=indent,eol,start   " allow backspacing over everything in insert
 set incsearch		               " do incremental searching
 
 set smartindent
-set tabstop=3
-set shiftwidth=3
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 if has('mouse')                  " Enable mouse if available 
