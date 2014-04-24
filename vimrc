@@ -76,6 +76,10 @@ if has('mouse')                  " Enable mouse if available
   set mouse=a
 endif
 
+"" Skim latex sync
+map <silent> <Leader>ls :silent !/Applications/Skim.app/Contents/SharedSupport/displayline
+                 \ <C-R>=line('.')<CR> "<C-R>=LatexBox_GetOutputFile()<CR>" "%:p" <CR>
+
 """ key remaps """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :let mapleader = ","
 
