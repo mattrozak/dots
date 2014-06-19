@@ -1,5 +1,7 @@
 #!/usr/bin/sh
 
+cd ~
+
 # copy files #
 mkdir ~/.dots
 cp vimrc ~/.dots
