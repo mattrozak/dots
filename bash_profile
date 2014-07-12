@@ -17,8 +17,6 @@ alias cd......="cd ../../../../.."
 
 alias v="vim"
 
-alias latexmk="latexmk -pdf -pvc -e '$pdflatex="pdflatex --shell-escape %O %S"'"
-
 # source .local_aliases
 if [ -f ~/.local_aliases ]; then
    source ~/.local_aliases 
