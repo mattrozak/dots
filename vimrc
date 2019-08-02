@@ -7,7 +7,7 @@ filetype off                     " required for vundle!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" let Vundle manage Vundle - required! 
+" let Vundle manage Vundle - required!
 Bundle 'gmarik/vundle'
 
 "" bundles ""
@@ -54,9 +54,9 @@ set showcmd		                  " display incomplete commands
 set showmatch                    " jumps to matching ([{}]) momentarily
 set number                       " show line numbers
 
-" highlight over 95 columns
+" highlight over 100 columns
 ""highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-""match OverLength /\%95v.\+/
+""match OverLength /\%100v.\+/
 
 " view trailing whitespace as dots
 set listchars=trail:·
@@ -72,7 +72,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
-if has('mouse')                  " Enable mouse if available 
+if has('mouse')                  " Enable mouse if available
   set mouse=a
 endif
 
@@ -109,8 +109,8 @@ if has("unix")
    let s:uname = system("uname -s")
    if s:uname == "Darwin"              " check for osx
       " copy/cut to clipboard on osx
-      vmap <C-x> :!pbcopy<CR>  
-      vmap <C-c> :w !pbcopy<CR><CR> 
+      vmap <C-x> :!pbcopy<CR>
+      vmap <C-c> :w !pbcopy<CR><CR>
    endif
 endif
 
