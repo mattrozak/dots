@@ -45,8 +45,8 @@ filetype plugin indent on     " required!
 "" visual ""
 
 syntax enable                    " altercation/vim-colors-solarized
-set background=dark              " set solarized dark theme
-colorscheme solarized
+"set background=dark              " set solarized dark theme
+"colorscheme solarized
 
 set history=50		               " keep 50 lines of command line history
 set ruler		                  " show the cursor position all the time

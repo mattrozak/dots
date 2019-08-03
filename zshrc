@@ -3,9 +3,16 @@
 
 # oh my zsh
 export ZSH="/Users/matt/.oh-my-zsh" # Path to your oh-my-zsh installation.
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="tjkirch"
+
 COMPLETION_WAITING_DOTS="true"
-plugins=(git)
+plugins=(
+    git
+    vi-mode
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+)
 source $ZSH/oh-my-zsh.sh
 
 # ls
@@ -21,8 +28,6 @@ alias cd...="cd ../.."
 alias cd....="cd ../../.."
 alias cd.....="cd ../../../.."
 alias cd......="cd ../../../../.."
-
-alias v="vim"
 
 # source .local_aliases
 if [ -f ~/.local_aliases ]; then
