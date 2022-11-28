@@ -1,45 +1,6 @@
 " .vimrc " Matt Rozak
 set nocompatible                 " viM settings - MUST be first
 
-""" vundle """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-filetype off                     " required for vundle!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" let Vundle manage Vundle - required!
-Bundle 'gmarik/vundle'
-
-"" bundles ""
-
-   "" syntax highlighting ""
-   Bundle 'altercation/vim-colors-solarized'
-
-   "" project traversal ""
-   Bundle 'scrooloose/nerdtree'
-
-   "" file traversal ""
-   Bundle 'Lokaltog/vim-easymotion'
-
-   "" error checking ""
-   Bundle 'scrooloose/syntastic'
-
-   "" LaTeX ""
-   Bundle 'LaTeX-Box-Team/LaTeX-Box'
-
-"" end bundles ""
-
-filetype plugin indent on     " required!
-"
-" Brief help
-" :BundleList                 - list configured bundles
-" :BundleInstall(!)           - install (update) bundles
-" :BundleSearch(!) foo        - search (or refresh cache first) for foo
-" :BundleClean(!)             - confirm (or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle commands are not allowed.
-
 """ environment settings """"""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "" visual ""
@@ -75,10 +36,6 @@ set expandtab
 if has('mouse')                  " Enable mouse if available
   set mouse=a
 endif
-
-"" Skim latex sync
-map <silent> <Leader>ls :silent !/Applications/Skim.app/Contents/SharedSupport/displayline
-                 \ <C-R>=line('.')<CR> "<C-R>=LatexBox_GetOutputFile()<CR>" "%:p" <CR>
 
 """ key remaps """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 :let mapleader = ","
